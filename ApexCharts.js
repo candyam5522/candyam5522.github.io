@@ -8688,6 +8688,10 @@
                         a = this,
                         s = this.ctx.toolbar,
                         r = i.globals.zoomEnabled ? i.config.chart.zoom.type : i.config.chart.selection.type;
+                    console.log(e);
+                    console.log(e.target);
+                    console.log(e.target.parentNode);
+                    console.log(e.target.parentNode.classList);
                     if (e.shiftKey ? (this.shiftWasPressed = !0, s.enableZoomPanFromToolbar("pan")) : this.shiftWasPressed && (s.enableZoomPanFromToolbar("zoom"), this.shiftWasPressed = !1), !(e.target.classList.contains("apexcharts-selection-rect") || e.target.parentNode.classList.contains("apexcharts-toolbar"))) {
                         if (a.clientX = "touchmove" === e.type || "touchstart" === e.type ? e.touches[0].clientX : "touchend" === e.type ? e.changedTouches[0].clientX : e.clientX, a.clientY = "touchmove" === e.type || "touchstart" === e.type ? e.touches[0].clientY : "touchend" === e.type ? e.changedTouches[0].clientY : e.clientY, "mousedown" === e.type && 1 === e.which) {
                             var n = a.gridRect.getBoundingClientRect();
