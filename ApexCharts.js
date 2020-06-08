@@ -8712,7 +8712,7 @@
                                 zoomtype: r
                             }), i.globals.panEnabled && i.config.xaxis.convertedCatToNumeric && a.delayedPanScrolled()), i.globals.zoomEnabled && a.hideSelectionRect(this.selectionRect), a.dragged = !1, a.w.globals.mousedown = !1
                             }
-                            catch {
+                            catch (err) {
 
                             }
                         }
