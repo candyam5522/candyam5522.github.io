@@ -8705,11 +8705,16 @@
                             context: a,
                             zoomtype: r
                         }))), "mouseup" === e.type || "touchend" === e.type || "mouseleave" === e.type) {
+                            try {
                             var o = a.gridRect.getBoundingClientRect();
                             a.w.globals.mousedown && (a.endX = a.clientX - o.left, a.endY = a.clientY - o.top, a.dragX = Math.abs(a.endX - a.startX), a.dragY = Math.abs(a.endY - a.startY), (i.globals.zoomEnabled || i.globals.selectionEnabled) && a.selectionDrawn({
                                 context: a,
                                 zoomtype: r
                             }), i.globals.panEnabled && i.config.xaxis.convertedCatToNumeric && a.delayedPanScrolled()), i.globals.zoomEnabled && a.hideSelectionRect(this.selectionRect), a.dragged = !1, a.w.globals.mousedown = !1
+                            }
+                            catch {
+
+                            }
                         }
                         this.makeSelectionRectDraggable()
                     }
