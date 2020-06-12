@@ -6178,13 +6178,7 @@
             }, {
                 key: "exportToSVG",
                 value: function() {
-                    //this.triggerDownload(this.svgUrl(), ".svg")
-                    var t = this;
-                    this.dataURI().then((function(e) {
-                        var i = e.imgURI,
-                            a = e.blob;
-                        a ? navigator.msSaveOrOpenBlob(a, t.w.globals.chartID + ".svg") : t.triggerDownload(i, ".svg")
-                    }))
+                    this.triggerDownload(this.svgUrl(), ".svg")
                 }
             }, {
                 key: "exportToPng",
