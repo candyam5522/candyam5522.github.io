@@ -6233,7 +6233,7 @@
                                     l = [];
                                     var r = u(a);
                                     if (r || (d.isFormatXY() ? r = i[e].data[a].x : d.isFormat2DArray() && (r = i[e].data[a] ? i[e].data[a][0] : "")), 0 === e) {
-                                        dateTimeValue = new Date(r);
+                                        var dateTimeValue = new Date(r);
                                         l.push(dateTimeValue.getUTCFullYear() +"/"+ (dateTimeValue.getUTCMonth()+1) +"/"+ dateTimeValue.getUTCDate() + " " + dateTimeValue.getUTCHours() + ":" + dateTimeValue.getUTCMinutes() + ":" + dateTimeValue.getUTCSeconds());
                                         for (var n = 0; n < o.globals.series.length; n++)
                                             l.push(o.globals.series[n][a])
