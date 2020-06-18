@@ -6224,7 +6224,7 @@
                                 i = o.config.labels[t];
                             return i
                         };
-                    l.push("category"), i.map((function(t, e) {
+                    l.push("DateTime"), i.map((function(t, e) {
                         o.globals.axisCharts && l.push(t.name ? t.name : "series-".concat(e))
                     })), o.globals.axisCharts || (l.push("value"), h.push(l.join(s))), i.map((function(t, e) {
                         o.globals.axisCharts ? function(t, e) {
@@ -6233,7 +6233,8 @@
                                     l = [];
                                     var r = u(a);
                                     if (r || (d.isFormatXY() ? r = i[e].data[a].x : d.isFormat2DArray() && (r = i[e].data[a] ? i[e].data[a][0] : "")), 0 === e) {
-                                        l.push(r);
+                                        dateTimeValue = new Date(r);
+                                        l.push(dateTimeValue.getUTCFullYear() +"/"+ (dateTimeValue.getUTCMonth()+1) +"/"+ dateTimeValue.getUTCDate() + " " + dateTimeValue.getUTCHours() + ":" + dateTimeValue.getUTCMinutes() + ":" + dateTimeValue.getUTCSeconds());
                                         for (var n = 0; n < o.globals.series.length; n++)
                                             l.push(o.globals.series[n][a])
                                     }
